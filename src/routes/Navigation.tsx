@@ -3,6 +3,7 @@ import logo from '../logo.svg';
 import {} from "../01-lazyload/pages";
 import {BrowserRouter, Navigate, NavLink, Route, Routes} from 'react-router-dom';
 import {lazy, Suspense} from "react";
+import ShoppingPage from "../02-component-patterns/pages/ShoppingPage";
 
 export const Navigation = () => {
   const Lazy1 = lazy(() => /* webpackChunkName: "LazyPage1" */import("./../01-lazyload/pages/LazyPage1"))
@@ -10,7 +11,7 @@ export const Navigation = () => {
   const Lazy3 = lazy(() => /* webpackChunkName: "LazyPage3" */import("./../01-lazyload/pages/LazyPage3"))
 
   const routes = [
-    {to: "/lazy1", path: "lazy1", name: "Lazy1", Component: Lazy1},
+    {to: "/", path: "/*", name: "Shopping store", Component: ShoppingPage},
     {to: "/lazy2", path: "lazy2", name: "Lazy2", Component: Lazy2},
     {to: "/lazy3", path: "lazy3", name: "Lazy3", Component: Lazy3}
   ]
