@@ -1,6 +1,4 @@
-import { title } from "process";
-import {ProductButtons, ProductCard, ProductImage, ProductTitle} from "../components/ProductCard";
-import {useProduct} from "../hooks/useProduct";
+import {ProductButtons, ProductImage, ProductTitle, ProductCard} from "../components";
 
 export const ShoppingPage = () => {
     const products = [
@@ -29,19 +27,6 @@ export const ShoppingPage = () => {
                     <ProductCard.Title />
                     <ProductCard.Buttons />
                 </ProductCard>
-                {
-                    // products.map( product => {
-                    //     const {counter, handleCount} = useProduct()
-                    //     return
-                    //     (<ProductCard key={product.id} product={product}>
-                    //         <ProductImage img={product.img}/>
-                    //         <ProductTitle title={product.title}/>
-                    //         <ProductButtons counter={counter} handleCount={handleCount}/>
-                    //     </ProductCard>)
-                    // })
-                }
-
-
             </div>
         </div>
     );
