@@ -27,6 +27,12 @@ export const ShoppingPage = () => {
                     <ProductCard.Title className={"text-bold"}/>
                     <ProductCard.Buttons className={"custom-buttons"}/>
                 </ProductCard>
+
+                <ProductCard style={{backgroundColor: "#70D1F8"}} product={product}>
+                    <ProductCard.Image className={"custom-image"} style={{ boxShadow: '10px 10px 10px rgba(0,0,0,0.2)'}}/>
+                    <ProductCard.Title className={"text-bold"} style={{fontWeight: 'bold'}}/>
+                    <ProductCard.Buttons style={{ display: 'flex', justifyContent: 'end'}}/>
+                </ProductCard>
             </div>
         </div>
     );
