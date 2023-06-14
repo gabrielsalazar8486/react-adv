@@ -1,11 +1,12 @@
 import {useContext} from "react";
 import styles from "../styles/styles.module.css";
 import {ProductContext} from "./ProductCard";
+import {ProductButtonsProps} from "../interfaces/interfaces";
 
-export const ProductButtons = ()=> {
+export const ProductButtons = ({className}:ProductButtonsProps)=> {
     const { handleCount, counter} = useContext( ProductContext )
     return (
-        <div className={styles.buttonsContainer}>
+        <div className={`${styles.buttonsContainer} ${className}`}>
             <button className={styles.buttonMinus} onClick={() => {
                 handleCount(-1);
             }}>-
